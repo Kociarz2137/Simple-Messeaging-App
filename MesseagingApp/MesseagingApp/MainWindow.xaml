@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MesseagingApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="MainWindow" Height="450" Width="815">
+    <Grid ShowGridLines="False">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>            
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        
+        <StackPanel x:Name="messeagePanel" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="5" Margin="5" Orientation="Horizontal" HorizontalAlignment="Left">
+            <TextBox x:Name="textInputField" Width="750" Height="40"></TextBox>
+            <Button x:Name="buttonSend" Width="25" Height="25" Margin="10,0,0,0"></Button>
+        </StackPanel>
+        <Border Grid.Row="0" Grid.Column="0" Grid.RowSpan="4" Margin="5" Padding="5" BorderThickness="2" BorderBrush="Black">
+            <StackPanel>
+                <Button Width="100">base server</Button>
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="4" Margin="5" Padding="5" BorderBrush="Black" BorderThickness="2"></Border>
     </Grid>
 </Window>
+
+
+<!-- TODO: Make right side more full -->
